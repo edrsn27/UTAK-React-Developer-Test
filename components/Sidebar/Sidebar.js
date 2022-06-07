@@ -26,7 +26,7 @@ export default function Sidebar() {
               href="#pablo"
               className="inline-block p-4 px-0 mr-0 text-sm font-bold text-left uppercase md:block md:pb-2 text-blueGray-600 whitespace-nowrap"
             >
-             FIREBASE USER MANAGEMENT
+              FIREBASE USER MANAGEMENT
             </a>
           </Link>
           {/* User */}
@@ -141,6 +141,40 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="block pt-1 pb-4 text-xs font-bold no-underline uppercase md:min-w-full text-blueGray-500">
+              Merchant
+            </h6>
+            {/* Navigation */}
+
+            <ul className="flex flex-col list-none md:flex-col md:min-w-full md:mb-4">
+              <li className="items-center">
+                <Link href="/admin/point-of-sales">
+                  <a
+                    href="#pablo"
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/point-of-sales") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
+                  >
+                    <i
+                      className={
+                        "fas fa-tools mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/point-of-sales") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
+                    Point of sales
+                  </a>
+                </Link>
+              </li>
+            </ul>
+
+            {/* Divider */}
+            <hr className="my-4 md:min-w-full" />
+            {/* Heading */}
+            <h6 className="block pt-1 pb-4 text-xs font-bold no-underline uppercase md:min-w-full text-blueGray-500">
               User Management
             </h6>
             {/* Navigation */}
@@ -150,9 +184,21 @@ export default function Sidebar() {
                 <Link href="/admin/users">
                   <a
                     href="#pablo"
-                    className="block py-3 text-xs font-bold uppercase text-blueGray-700 hover:text-blueGray-500"
+                    className={
+                      "text-xs uppercase py-3 font-bold block " +
+                      (router.pathname.indexOf("/admin/users") !== -1
+                        ? "text-lightBlue-500 hover:text-lightBlue-600"
+                        : "text-blueGray-700 hover:text-blueGray-500")
+                    }
                   >
-                    <i className="mr-2 text-sm fas fa-users text-blueGray-400"></i>{" "}
+                    <i
+                      className={
+                        "fas fa-tools mr-2 text-sm " +
+                        (router.pathname.indexOf("/admin/users") !== -1
+                          ? "opacity-75"
+                          : "text-blueGray-300")
+                      }
+                    ></i>{" "}
                     App users
                   </a>
                 </Link>

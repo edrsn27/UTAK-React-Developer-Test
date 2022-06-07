@@ -25,7 +25,10 @@ export default function Admin({ children }) {
         <div className="relative md:ml-64 bg-blueGray-100">
           <AdminNavbar />
           {/* Header */}
-          <HeaderStats />
+          {router.pathname.indexOf("/admin/point-of-sales") !== 0 ? (
+            <HeaderStats />
+          ) : null}
+
           <div className="w-full px-4 mx-auto -m-24 md:px-10">
             {children}
             <FooterAdmin />

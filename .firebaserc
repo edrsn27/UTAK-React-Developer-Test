@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "fir-account-management"
-  }
+    "default": "utak-react-developer-test",
+    "staging": "utak-react-developer-test"
+  },
+  "targets": {}
 }
